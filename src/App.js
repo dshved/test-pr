@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Typography from "@material-ui/core/Typography";
-
+import LinearProgress from "@material-ui/core/LinearProgress";
 import Dialog from "./components/Dialog";
 import Table from "./components/Table";
 
@@ -64,7 +64,7 @@ class App extends Component {
           </Typography>
         </header>
         <main>
-          {regions.length === 0 ? <div>Loading...</div> : this.renderRegions()}
+          {regions.length === 0 ? <LinearProgress /> : this.renderRegions()}
         </main>
         <Dialog
           open={this.state.open}
