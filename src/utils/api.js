@@ -1,4 +1,4 @@
-const DATA_URL = "https://restcountries.eu/rest/v1/all";
+const DATA_URL = "https://restcountries.com/v3.1/all";
 
 export const getCountryes = async () => {
   const response = await fetch(DATA_URL);

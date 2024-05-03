@@ -70,7 +70,7 @@ class SimpleTable extends Component {
                 .map((n, i) => {
                   return (
                     <TableRow tabIndex={-1} key={i}>
-                      <TableCell>{n.name}</TableCell>
+                      <TableCell>{n.name.common}</TableCell>
                       <TableCell align="right">{n.population}</TableCell>
                       <TableCell align="right">
                         <Button

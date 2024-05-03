@@ -74,7 +74,7 @@ class SimpleDialog extends Component {
               <TextField
                 fullWidth={true}
                 label="Name"
-                defaultValue={detail.name}
+                defaultValue={detail.name && detail.name.official}
                 margin="normal"
                 InputProps={{
                   readOnly: true,
@@ -86,7 +86,7 @@ class SimpleDialog extends Component {
               <TextField
                 fullWidth={true}
                 label="alpha2Code"
-                defaultValue={detail.alpha2Code}
+                defaultValue={detail.altSpellings && detail.altSpellings[0]}
                 margin="normal"
                 InputProps={{
                   readOnly: true,
@@ -159,7 +159,7 @@ class SimpleDialog extends Component {
                 fullWidth={true}
                 label="List of languages spoken"
                 defaultValue={
-                  detail.languages ? detail.languages.join(", ") : ""
+                  detail.languages ? Object.values(detail.languages).join(", ") : ""
                 }
                 margin="normal"
                 InputProps={{
