@@ -38,12 +38,13 @@ class App extends Component {
     const { regions } = this.state;
     return regions.map((region, id) => {
       const countries = [];
+
+      region[1].map((country, id) => {
+        countries.push(country);
+        return false;
+      })
       return (
         <section key={id}>
-          {region[1].map((country, id) => {
-            countries.push(country);
-            return false;
-          })}
           <Table
             data={countries}
             onCountrySelect={this.handleClickOpen}
